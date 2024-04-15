@@ -19,11 +19,7 @@ function Navbar() {
 
     const handleChatBtnClick = () => {
         if (!isButtonDisabled) {
-            toast.info("Experiencing high traffic, Please wait a moment.", {
-                position: toast.POSITION.TOP_CENTER,
-                onOpen: () => setIsButtonDisabled(true),
-                onClose: () => setIsButtonDisabled(false),
-            });
+            window.location.href = "/login"; 
         }
     };
 
@@ -69,8 +65,7 @@ function Navbar() {
                 type="button"
                 disabled={isButtonDisabled}
                 onClick={handleChatBtnClick}
-            >
-                <FontAwesomeIcon icon={faCommentDots} /> Live Chat
+            > Login 
             </button>
 
             {/* Mobile */}

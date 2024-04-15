@@ -23,7 +23,7 @@ const LoginForm = (props) => {
     return (
         <div style={styles.container}>
             <center>
-                <div style={styles.heading}>Sign In to Hummigo</div>
+                <div style={styles.heading}>Sign In to VitaLink</div>
             </center>
             <center>
                 <div><img style={styles.img} src={hummigoIcon} alt="Hummigo Icon" /></div>

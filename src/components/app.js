@@ -1,12 +1,18 @@
-import { BrowserRouter, useHistory, Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "../css/app.css";
+import Home from "./Home";
 
-export default function App() {
+function App() {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={Home} history={useHistory()} />
-            </Switch>
-        </BrowserRouter>
-    )
+        <div className="App">
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </Router>
+        </div>
+    );
 }
+
+export default App;

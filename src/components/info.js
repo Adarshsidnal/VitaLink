@@ -12,7 +12,7 @@ function Info() {
           <span>What We Do</span>
         </h3>
         <p className="info-description">
-        Hummigo webapp supplements the hummigo app and aims at making an impact on community 
+        VitaLink aims at making an impact on community 
         by providing nearby services such as diagnostic services, hospitals, gyms, yoga classes etc. 
         and also provides the best platform to read or write blogs and share personal stories of people
         suffering with chronic illness. The blogs and stories also get sorted as per user's interests 
@@ -74,5 +74,4 @@ function Info() {
     </div>
   );
 }
-
 export default Info;

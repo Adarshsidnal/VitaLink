@@ -128,7 +128,7 @@ const LoginForm = () => {
     useEffect(() => {
         if (isAuthenticated) {
             localStorage.setItem('@userdetails', JSON.stringify(user));
-            navigate("/home");
+            navigate("/download");
         }
     }, [isAuthenticated, user, navigate]);
 

@@ -8,7 +8,7 @@ ReactDOM.render(
     domain="dev-7wrcr201frib5e12.us.auth0.com"
     clientId="wybWLyGVFN6QBSZQSQn53223PFtmQ5Ze"
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: "http://localhost:3000/download"
     }}
   >
     <React.StrictMode>

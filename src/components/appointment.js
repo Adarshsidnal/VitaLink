@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import './Appointment.css'; // Renamed App.css to Appointment.css for clarity
+import './Appointment.css'; 
 
 function Appointment() {
     const [feedbacks, setFeedbacks] = useState([]);
@@ -14,7 +14,7 @@ function Appointment() {
 
     const fetchFeedbacks = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/feedback");
+            const response = await axios.get("http://localhost:9090/feedback");
             setFeedbacks(response.data);
         } catch (error) {
             console.error("Error fetching feedbacks", error);
@@ -28,7 +28,7 @@ function Appointment() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/api/feedback", formData);
+            const response = await axios.post("http://localhost:9090/feedback", formData);
             setFeedbacks([...feedbacks, response.data]);
             toast.success("Feedback submitted successfully!");
             setFormData({ name: "", email: "", feedback: "" });
@@ -39,9 +39,6 @@ function Appointment() {
 
     return (
         <div className="appointment-container">
-            
-            {/* Your appointment booking UI goes here */}
-
             <h2>Feedback</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -75,7 +72,6 @@ function Appointment() {
                 </div>
                 <button type="submit">Submit Feedback</button>
             </form>
-
 
             <ToastContainer />
         </div>

@@ -37,7 +37,6 @@ export default function Download(props) {
     const navigate = useNavigate();
 
     const handleDownloadClick = () => {
-        // Call the backend API to trigger the download
         fetch('/download') // Assuming the API endpoint is at /download
             .then(response => {
                 if (!response.ok) {

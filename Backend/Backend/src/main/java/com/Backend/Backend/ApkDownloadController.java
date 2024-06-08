@@ -19,19 +19,15 @@ public class ApkDownloadController {
 
     @GetMapping("/download")
     public ResponseEntity<Resource> downloadApk() throws IOException {
-        // Read the APK file
+
         File file = new File(APK_FILE_PATH);
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
 
-        // Set up HTTP headers
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + file.getName());
         headers.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM_VALUE);
         headers.add(HttpHeaders.CONTENT_LENGTH, String.valueOf(file.length()));
 
-        // Return the file as a response
-        return ResponseEntity.ok()
-                .headers(headers)
-                .body(resource);
+        return ResponseEntity.ok().headers(headers).body(resource);
     }
 }

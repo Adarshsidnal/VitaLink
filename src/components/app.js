@@ -25,7 +25,7 @@ import {Navigate, BrowserRouter as Router, Route, Routes } from 'react-router-do
 import Home from './Home';
 import LoginForm from './Login';
 import Download from './DownloadPage';
-
+import Appointment from './appointment';
 const App = () => {
     return (
         <Auth0Provider
@@ -39,7 +39,9 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<LoginForm />} />
-                    <Route path="/download" element={<Download/>} />
+                    <Route path="/download" element={<Download />} />
+                    <Route path="/appointment" element={<Appointment />} />
+
                     {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
                 </Routes>
             </Router>

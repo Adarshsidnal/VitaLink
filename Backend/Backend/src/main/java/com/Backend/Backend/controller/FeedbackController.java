@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/feedback")
-@CrossOrigin(origins = "http://localhost:3000")  // Allow requests from this origin
+@CrossOrigin(origins = "http://localhost:3000") 
 public class FeedbackController {
-
     @Autowired
     private FeedbackRepository feedbackRepository;
 

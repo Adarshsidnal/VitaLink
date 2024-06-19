@@ -20,7 +20,6 @@
 
 // export default App;
 import React from 'react';
-import { Auth0Provider } from '@auth0/auth0-react';
 import {Navigate, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import LoginForm from './Login';
@@ -28,13 +27,6 @@ import Download from './DownloadPage';
 import Appointment from './appointment';
 const App = () => {
     return (
-        <Auth0Provider
-            domain="dev-7wrcr201frib5e12.us.auth0.com"
-            clientId="wybWLyGVFN6QBSZQSQn53223PFtmQ5Ze"
-            authorizationParams={{
-                redirect_uri: "http://localhost:3000/download"
-            }}
-        >
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -45,7 +37,6 @@ const App = () => {
                     {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
                 </Routes>
             </Router>
-        </Auth0Provider>
     );
 };
 

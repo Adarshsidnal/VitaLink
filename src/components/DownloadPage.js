@@ -61,7 +61,7 @@ export default function Download(props) {
     return (
         <div>
             <Navbar />
-            <div id="download">Download the Official <span>h</span><span>ummigo</span> app now!</div>
+            <div id="download">Download the Official <span>V</span><span>itaLink</span> app now!</div>
             <div id="downloaddesc">Be one of the first few users to get an early access to the app.</div>
             <center className="mobcontainer">
                 <div><img src={mobile} style={{ maxWidth: '80vw', marginTop: '-6vh' }} /></div>
